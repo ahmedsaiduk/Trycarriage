@@ -1,4 +1,4 @@
-# CRUD API for transactions
+# CRUD API for transactions and metasearch
 # with meta-search
 module Api
   # CRUD API class for transactions
