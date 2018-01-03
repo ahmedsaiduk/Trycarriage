@@ -1,4 +1,4 @@
-# Modified routes
+# Modified routes (core file)
 Rails.application.routes.draw do
   post 'api/transactions/sq_ft', to: 'api/transactions#sq_ft_range', via: :post
   post 'api/transactions/price', to: 'api/transactions#price_range', via: :post

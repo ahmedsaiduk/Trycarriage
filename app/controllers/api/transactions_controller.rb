@@ -1,5 +1,5 @@
 # CRUD API for transactions and metasearch
-# with meta-search
+# with meta-search (core file)
 module Api
   # CRUD API class for transactions
   class TransactionsController < ApplicationController

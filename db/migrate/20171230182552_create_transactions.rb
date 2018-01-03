@@ -1,4 +1,4 @@
-# transactions migration with sheet
+# transactions migration with sheet  (core file)
 class CreateTransactions < ActiveRecord::Migration[5.1]
   require 'csv'
   def change
@@ -19,9 +19,9 @@ class CreateTransactions < ActiveRecord::Migration[5.1]
     end
     # import file once the migration made
     CSV.read('public/Sacramentorealestatetransactions.csv').drop(1).each do |row|
-      transaction = Transaction.create(street: row[0].to_s, city: row[1].to_s, zip: row[2].to_i, state: row[3].to_s, beds: row[4].to_i,
-                                       baths: row[5].to_i, sq_ft: row[6].to_f, types: row[7], sale_date: Time.parse(row[8]),
-                                       price: row[9].to_f, latitude: row[10].to_f, longitude: row[11].to_f)
+      Transaction.create(street: row[0].to_s, city: row[1].to_s, zip: row[2].to_i, state: row[3].to_s, beds: row[4].to_i,
+                         baths: row[5].to_i, sq_ft: row[6].to_f, types: row[7], sale_date: Time.parse(row[8]),
+                         price: row[9].to_f, latitude: row[10].to_f, longitude: row[11].to_f)
     end
   end
 end
